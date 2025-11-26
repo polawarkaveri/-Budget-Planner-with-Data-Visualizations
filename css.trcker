@@ -1,0 +1,128 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --color-primary: #3498db; /* Blue */
+    --color-secondary: #2ecc71; /* Green */
+    --color-background: #2c3e50; /* Dark Blue/Gray for body */
+    --color-card-bg: #34495e; /* Slightly lighter card background */
+    --color-text-light: #ecf0f1; /* Light text for readability */
+    --color-danger: #e74c3c;
+    --color-success: #27ae60;
+    --color-warning: #f39c12;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Ensure the main Vue container fills the height */
+#app {
+    min-height: 100vh;
+}
+
+/* --- Auth/Login View --- */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-container .card {
+    background-color: var(--color-card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* --- Dashboard Layout & Cards --- */
+.dashboard-container {
+    padding-top: 20px !important;
+}
+
+.navbar {
+    background-color: var(--color-card-bg) !important;
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.navbar-brand {
+    color: var(--color-text-light) !important;
+    font-weight: bold;
+}
+
+.card {
+    background-color: var(--color-card-bg);
+    color: var(--color-text-light);
+    border: none; /* Rely on shadow for depth */
+    border-radius: 12px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+    padding: 15px 20px;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Style for specific card headers used in the HTML template */
+.card-header.bg-primary {
+    background-color: var(--color-primary) !important;
+    color: var(--color-card-bg) !important;
+}
+.card-header.bg-warning {
+    background-color: var(--color-warning) !important;
+    color: var(--color-card-bg) !important;
+}
+
+/* --- Form Elements --- */
+.form-control, .form-select {
+    background-color: #4a637c; /* Darker input field */
+    color: var(--color-text-light);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: border-color 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: #4a637c;
+    color: var(--color-text-light);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25); /* Primary color shadow */
+}
+
+/* --- List/Transaction History --- */
+.list-group-item {
+    background-color: #3f5870; /* Distinct background for list items */
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-light);
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+.list-group-item:hover {
+    background-color: #4a637c;
+}
+
+/* --- Progress Bar (Savings Goals) --- */
+.progress {
+    background-color: #4a637c;
+    height: 1.5rem;
+}
+
+.progress-bar {
+    background-color: var(--color-secondary) !important; /* Use a success color for progress */
+}
+
+/* --- Utilities & Emphasis --- */
+.text-danger {
+    color: var(--color-danger) !important;
+}
+.text-success {
+    color: var(--color-secondary) !important;
+}
